@@ -15,7 +15,7 @@
  *         provided with the distribution.
  *     3.  Neither the name of the owner nor the names of its contributors may be used to endorse
  *         or promote products derived from this software without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
  * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
  * FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE
@@ -53,8 +53,8 @@
 #define GPIO_PIN                                 18
 #define DMA                                      5
 
-#define WIDTH                                    3
-#define HEIGHT                                   3
+#define WIDTH                                    8
+#define HEIGHT                                   1
 #define LED_COUNT                                (WIDTH * HEIGHT)
 
 
@@ -198,4 +198,3 @@ int main(int argc, char *argv[])
 
     return ret;
 }
-

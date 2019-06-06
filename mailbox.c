@@ -50,8 +50,8 @@ void *mapmem(unsigned base, unsigned size)
    unsigned offset = base % PAGE_SIZE;
    base = base - offset;
    /* open /dev/mem */
-   if ((mem_fd = open("/dev/mem", O_RDWR|O_SYNC) ) < 0) {
-      printf("can't open /dev/mem\nThis program should be run as root. Try prefixing command with: sudo\n");
+   if ((mem_fd = open("/dev/gpiomem", O_RDWR|O_SYNC) ) < 0) {
+      printf("can't open /dev/gpiomem\nThis program should be run as root. Try prefixing command with: sudo\n");
       exit (-1);
    }
    void *mem = mmap(
@@ -270,9 +270,9 @@ int mbox_open(void) {
    char filename[64];
 
    // open a char device file used for communicating with kernel mbox driver
-   sprintf(filename, "/tmp/mailbox-%d", getpid());
+   sprintf(filename, "/dev/water-tank-led";
    unlink(filename);
-   if (mknod(filename, S_IFCHR|0600, makedev(100, 0)) < 0) {
+   if (mknod(filename, S_IFCHR|0600, makedev(249, 0)) < 0) {
       printf("Failed to create mailbox device %s: %m\n", filename);
       return -1;
    }
